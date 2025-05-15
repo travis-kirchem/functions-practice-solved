@@ -9,7 +9,7 @@
 
 ## BEFORE YOU START
 Every exercise in this assignment has a reference to a .MD file in the /exercise-info/ folder. Make sure to read the
-info file before you start solving the exercise tasks.
+info file before you start solving the exercise tasks. 
 
 ## HOW IT WORKS
 - The repo has the "exercises" folder with 4 exercise files (e1.js, e2.js, ... etc). Each file includes the 

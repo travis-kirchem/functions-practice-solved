@@ -15,7 +15,20 @@
  */
 
 // Your code goes here...
-
+function doesArrayIncludeItemsBetweenVals(arr, val1, val2) {
+if (!arr.length) return false;
+for (let elem of arr) {
+    if (elem > val1 && elem < val2) {
+      // this early return will prevent the function from executing the rest of the code
+      // if it has met the first truthy condition value.
+      return true;
+    }
+  }
+  // this is the default return statement for this function which happen in any case
+  // not covered by early returns.
+  return false;
+}
+doesArrayIncludeItemsBetweenVals([1,2,3], 4, 5);
 
 
 
@@ -36,8 +49,34 @@
 
 // Your code goes here...
 
+// Named Function
+function getValueWithConditionOne(x, y) {
+  if (x == 40 && y == 40) {
+    return x + y;
+  } else {
+    return (x + y)*2;
+  }
+}
+// Arrow Function
+const getValueWithConditionTwo = (x, y) => {
+  if (x == 40 && y == 40) {
+    return x + y;
+  } else {
+    return (x + y)*2;
+  }
+}
+// Variable name for the function expression
+const getValueWithConditionThree = function (x, y) {
+  if (x == 40 && y == 40) {
+    return x + y;
+  } else {
+    return (x + y)*2;
+  }
+}
 
-
+getValueWithConditionOne();
+getValueWithConditionTwo();
+getValueWithConditionThree();
 
 // === TEST YOURSELF ===
 // Once you're finished run the test with "npm run test-3"
